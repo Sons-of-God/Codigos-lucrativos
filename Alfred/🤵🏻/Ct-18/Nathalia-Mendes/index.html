@@ -990,14 +990,55 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <p style="margin-top: 20px; text-align: center; ">Código gerado com sucesso:</p>
             <p id="codigoAleatorio" style="font-weight: bold; margin-top: -15px; text-align: center; margin-bottom: -10px; font-size: 25px;"></p>
         </div>
+
+
+
+
+<audio id="dinheiroSound">
+  <source src="Som-de-dinheiro-Caixa-registradora.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+
+
+
+
+
+
             
-        <form id="pythonGenerator" style="padding-top: 20px;">
-            <label for="chatId" class="label-container" style="background-color: #e2e8ef; padding: 10px; border-radius: 12px; text-align: center; width: 100%; margin-bottom: 10px;">Insira o código gerado abaixo:</label>
-            <input type="text" id="chatId" name="chatId" style="border-radius: 12px;">
+<form id="pythonGenerator" style="padding-top: 20px;">
+    <label for="chatId" class="label-container" style="background-color: #e2e8ef; padding: 10px; border-radius: 12px; text-align: center; width: 100%; margin-bottom: 10px;">Insira o código gerado abaixo:</label>
+    <input type="text" id="chatId" name="chatId" style="border-radius: 12px;">
     
-                <!-- Botão de envio -->
-            <input type="submit" value="Enviar" class="enviarCodigo" id="B1" onclick="showLoadingB1(); return false;">
-        </form>
+    <!-- Botão de envio -->
+    <input type="submit" value="Enviar" class="enviarCodigo" id="B1" onclick="showLoadingB1(); playSound(); return false;">
+</form>
+<script>
+  function showLoadingB1() {
+    // Mostra o popup de loading B1
+    // Aqui você pode adicionar o código para mostrar o popup
+
+    // Toca o som
+    playSound();
+  }
+
+  function showLoadingB2() {
+    // Mostra o popup de loading B2
+    // Aqui você pode adicionar o código para mostrar o popup
+
+    // Toca o som
+    playSound();
+  }
+
+  // Repita para showLoadingB3 até showLoadingB10
+
+  function playSound() {
+    var sound = document.getElementById('dinheiroSound');
+    sound.play();
+  }
+</script>
+	
             
     </div>
     
@@ -1039,7 +1080,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             <input type="text" id="chatId" name="chatId" style="border-radius: 12px;">
     
                 <!-- Botão de envio -->
-            <input type="submit" value="Enviar" class="enviarCodigo" id="B2" onclick="showLoadingB2(); return false;">
+            <input type="submit" value="Enviar" class="enviarCodigo" id="B2" onclick="showLoadingB2(); playSound(); return false;">
         </form>
             
     </div>
@@ -1083,7 +1124,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 <input type="text" id="chatId" name="chatId" style="border-radius: 12px;">
     
                 <!-- Botão de envio -->
-                <input type="submit" value="Enviar" class="enviarCodigo" id="B3" onclick="showLoadingB3(); return false;">
+                <input type="submit" value="Enviar" class="enviarCodigo" id="B3" onclick="showLoadingB3(); playSound(); return false;">
             </form>
             
         </div>
@@ -1128,7 +1169,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 <input type="text" id="chatId" name="chatId" style="border-radius: 12px;">
     
                 <!-- Botão de envio -->
-                <input type="submit" value="Enviar" class="enviarCodigo" id="B4" onclick="showLoadingB4(); return false;">
+                <input type="submit" value="Enviar" class="enviarCodigo" id="B4" onclick="showLoadingB4();  playSound(); return false;">
             </form>
             
         </div>
@@ -1173,7 +1214,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 <input type="text" id="chatId" name="chatId" style="border-radius: 12px;">
     
                 <!-- Botão de envio -->
-                <input type="submit" value="Enviar" class="enviarCodigo" id="B5" onclick="showLoadingB5(); return false;">
+                <input type="submit" value="Enviar" class="enviarCodigo" id="B5" onclick="showLoadingB5(); playSound(); return false;">
             </form>
             
         </div>
@@ -1218,7 +1259,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 <input type="text" id="chatId" name="chatId" style="border-radius: 12px;">
     
                 <!-- Botão de envio -->
-                <input type="submit" value="Enviar" class="enviarCodigo" id="B6" onclick="showLoadingB6(); return false;">
+                <input type="submit" value="Enviar" class="enviarCodigo" id="B6" onclick="showLoadingB6(); playSound(); return false;">
             </form>
             
         </div>
@@ -1262,7 +1303,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 <input type="text" id="chatId" name="chatId" style="border-radius: 12px;">
     
                 <!-- Botão de envio -->
-                <input type="submit" value="Enviar" class="enviarCodigo" id="B7" onclick="showLoadingB7(); return false;">
+                <input type="submit" value="Enviar" class="enviarCodigo" id="B7" onclick="showLoadingB7(); playSound(); return false;">
             </form>
             
         </div>
@@ -1307,7 +1348,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 <input type="text" id="chatId" name="chatId" style="border-radius: 12px;">
     
                 <!-- Botão de envio -->
-                <input type="submit" value="Enviar" class="enviarCodigo" id="B8" onclick="showLoadingB8(); return false;">
+                <input type="submit" value="Enviar" class="enviarCodigo" id="B8" onclick="showLoadingB8(); playSound(); return false;">
             </form>
             
         </div>
@@ -1352,7 +1393,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 <input type="text" id="chatId" name="chatId" style="border-radius: 12px;">
     
                 <!-- Botão de envio -->
-                <input type="submit" value="Enviar" class="enviarCodigo" id="B9" onclick="showLoadingB9(); return false;">
+                <input type="submit" value="Enviar" class="enviarCodigo" id="B9" onclick="showLoadingB9();  playSound(); return false;">
             </form>
             
         </div>
@@ -1396,7 +1437,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 <input type="text" id="chatId" name="chatId" style="border-radius: 12px;">
     
                 <!-- Botão de envio -->
-                <input type="submit" value="Enviar" class="enviarCodigo" id="B10" onclick="showLoadingB10(); return false;">
+                <input type="submit" value="Enviar" class="enviarCodigo" id="B10" onclick="showLoadingB10(); playSound(); return false;">
             </form>
             
         </div>
@@ -1600,7 +1641,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
       <p class="popup-text">Atenção, realize o pagamento da taxa de R$29,90 para desbloquear o seu saldo pendente!</p>
       <p class="popup-text">Taxa necessária para evitar fraudes e golpes, mas você receberá esse valor de volta a sua conta após o saque!</p>
       <div style="margin-bottom: 20px;"></div>
-      <button class="desbloquear-button" style="font-weight: bold;" onclick="window.open('https://go.perfectpay.com.br/PPU38CNGABD?src= | 🤵🏻 | [ Alfred ] | [ Ct - 18 ] | [ Nathalia@nathalia_mendes_56] | [ https://wwhttps://trello.com/c/QQbXoEgy/41-%E2%9C%85-ct-18-nathalia-mendes%85-ct-17-ju@nathalia_mendes_56-ramos ] | [ @julia_ramos_001 ] |?hideb=1&hidecard=1', '_blank')">DESBLOQUEAR SALDO ➔</button>
+      <button class="desbloquear-button" style="font-weight: bold;" onclick="window.open('https://go.perfectpay.com.br/PPU38CNGABD?src= | 🤵🏻 | [ Alfred ] | [ Ct - 18 ] | [ Nathalia Mendes ] | [ https://www.tiktok.com/@nathalia_mendes_56 ] | [ https://trello.com/c/QQbXoEgy/41-%E2%9C%85-ct-18-nathalia-mendes ] | [ @nathalia_mendes_56 ] |?hideb=1&hidecard=1', '_blank')">DESBLOQUEAR SALDO ➔</button>
       <div style="margin-bottom: 15px;"></div>
       <button class="popup-button" onclick="closePopup()">X</button>
     </div>
