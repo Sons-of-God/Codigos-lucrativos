@@ -73,7 +73,7 @@ function getCookie(cname) {
     return '';
 }
 
-let valor = parseFloat(getCookie('valor')) || 100.00;
+let valor = parseFloat(getCookie('valor')) || 230.00;
 const valorSpan = document.getElementById('valor');
 const valorSpanSaque = document.getElementById('valor-saque');
 const valorSpanMoney = document.getElementById('valor-money');
@@ -88,7 +88,7 @@ function atualizarValor() {
 atualizarValor(); // Atualiza o valor inicial na caixa de valor
 
 // Array com os valores desejados
-const valoresDesejados = [33, 34, 47, 43, 52, 32, 32, 27, 30, 43];
+const valoresDesejados = [82, 73, 74, 81, 97, 82, 82, 27, 75, 13];
 
 // FunÃ§Ã£o para aumentar o valor
 function aumentarValor() {
@@ -421,7 +421,7 @@ function closePopupL() {
 
 // POPUP Limite diÃ¡rio quando bate X valor
 function verificarValor() {
-    if (valor >= 470 && valor < 475) {
+    if (valor >= 700 && valor < 920) {
         // Popup para valor >= 1362.60 e < 2725.20
         showPopupL();
     } else if (valor >= 940 && valor < 950) {
