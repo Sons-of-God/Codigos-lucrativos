@@ -83,9 +83,13 @@ function trocarDiv(esconderId, mostrarId) {
 
 
 
+// Função para reproduzir o áudio
+function playAudio(audioFileName) {
+    var audio = new Audio(audioFileName);
+    audio.play();
+}
+
 // Carregando B2
-
-
 function showPopupB2() {
     document.getElementById('popupB2').style.display = 'block';
     document.getElementById('enviarResposta').disabled = true;
@@ -94,23 +98,20 @@ function showPopupB2() {
 function closePopupB2() {
     document.getElementById('popupB2').style.display = 'none';
     document.getElementById('enviarResposta').disabled = true;
-}   
+}
 
-    function showLoadingB2() {
-        var button = document.getElementById("enviarResposta");
-            showPopupB2();
-            playAudio('cash.mp3');
-            
-            // Simulando um atraso de 3 segundos para o showPopup2()
-            setTimeout(function () {
-                closePopupB2();
-                nubank();
-            }, 4000); // 3 segundos
-        }
+function showLoadingB2() {
+    var button = document.getElementById("enviarResposta");
+    showPopupB2();
+    playAudio('Som-de-dinheiro-Caixa-registradora.mp3'); // Reproduzindo o som
+    // Simulando um atraso de 3 segundos para o showPopup2()
+    setTimeout(function () {
+        closePopupB2();
+        nubank();
+    }, 4000); // 3 segundos
+}
 
 // Carregando B3
-
-
 function showPopupB3() {
     document.getElementById('popupB3').style.display = 'block';
     document.getElementById('enviarResposta').disabled = true;
@@ -119,23 +120,20 @@ function showPopupB3() {
 function closePopupB3() {
     document.getElementById('popupB3').style.display = 'none';
     document.getElementById('enviarResposta').disabled = true;
-}   
+}
 
-    function showLoadingB3() {
-        var button = document.getElementById("enviarResposta");
-            showPopupB3();
-            playAudio('cash.mp3');
-            
-            // Simulando um atraso de 3 segundos para o showPopup2()
-            setTimeout(function () {
-                closePopupB3();
-                bradesco();
-            }, 4000); // 3 segundos
-        }
+function showLoadingB3() {
+    var button = document.getElementById("enviarResposta");
+    showPopupB3();
+    playAudio('Som-de-dinheiro-Caixa-registradora.mp3'); // Reproduzindo o som
+    // Simulando um atraso de 3 segundos para o showPopup2()
+    setTimeout(function () {
+        closePopupB3();
+        bradesco();
+    }, 4000); // 3 segundos
+}
 
 // Carregando B4
-
-
 function showPopupB4() {
     document.getElementById('popupB4').style.display = 'block';
     document.getElementById('enviarResposta').disabled = true;
@@ -144,17 +142,15 @@ function showPopupB4() {
 function closePopupB4() {
     document.getElementById('popupB4').style.display = 'none';
     document.getElementById('enviarResposta').disabled = true;
-}   
+}
 
-    function showLoadingB4() {
-        var button = document.getElementById("enviarResposta");
-            showPopupB4();
-            playAudio('cash.mp3');
-            
-            // Simulando um atraso de 3 segundos para o showPopup2()
-            setTimeout(function () {
-                closePopupB4();
-                mcdonalds();
-            }, 4000); // 3 segundos
-        }
-
+function showLoadingB4() {
+    var button = document.getElementById("enviarResposta");
+    showPopupB4();
+    playAudio('Som-de-dinheiro-Caixa-registradora.mp3'); // Reproduzindo o som
+    // Simulando um atraso de 3 segundos para o showPopup2()
+    setTimeout(function () {
+        closePopupB4();
+        mcdonalds();
+    }, 4000); // 3 segundos
+}

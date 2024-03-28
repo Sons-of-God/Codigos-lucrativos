@@ -241,6 +241,14 @@
         border: 1px solid gray;
         padding-left: 10px;
       }
+
+
+.content-card {
+  border: 2px solid black; /* Define a borda com 2px de largura e cor preta */
+  padding: 20px; /* Adiciona um espaço interno de 20px para melhor visualização */
+}
+
+
     </style>
   </head>
   <body>
@@ -250,28 +258,16 @@
       <div>
         <img class="dropdown" src="images/jSAHhqKankEs.png" alt="">
         <img src="images/QQ2858saqVwr.png" alt="">
-        <span id="saldo">R$230,00</span>
+        <h3 id="saldo">R$230,00</h3>
       </div>
     </header>
+
+
+<p> </p><p> </p><p> </p><p></p>
+
     <div class="card-center">
       <div class="content-card">
-        <!-- <span class="box-alert">
-          <img src="/images/alert.png" alt="" />
-        </span>
-        <div class="error-text">
-          <h2>ERRO 504</h2>
-          <h2>CHAVE PIX NÃO CADASTRADA</h2>
-          <p>Parece que você ainda não ativou seu cadastro</p>
-        </div>
-        <div class="information-box">
-          <p style="text-align: center">
-            Para efetuar o saque e também continuar avaliando mais marcas, é
-            necessário realizar seu cadastro!<br /><br />Leva menos de 5
-            minutos.<br /><br />Depois você já vai conseguir efetuar o saque
-            direto para sua chave PIX.
-          </p>
-          <button class="submit-button button-three">REALIZAR MEU CADASTRO</button>
- -->
+
         <span class="box-seta">
           <img src="images/gy1TiVrwRW1n.png" alt="">
         </span>
@@ -283,7 +279,7 @@
               <img src="images/LTGxovC0iBys.png" alt="">
               <p>Saldo total:</p>
             </span>
-           <h3>R$ 230,00</h3> 
+           <h3 id="carteira">R$ 230,00</h3> 
           </div>
           <div class="final-box">
             <h2 class="">Parabéns!</h2>
@@ -296,34 +292,58 @@
           </div>
           </div>
         </div>
-        <!--         <span class="box-seta box-seta-2">
-          <h2>Realizar Saque</h2>
-        </span>
-        <div class="text-two-page">
-          <p style="text-align: center;">Aqui na página de <b><span style="color: #2d67e9;">SAQUES</span></b> você realiza o saque de todas as suas avaliações.</p>
-        </div>
-          <div class="div-color-itens">
-            <span class="box-img">
-              <img src="images/LTGxovC0iBys.png" alt="">
-              <p>Saldo total:</p>
-            </span>
-           <h3>R$ 230,00</h3> 
-          </div>
-          <div class="final-box">
-            <p style="text-align: center;">Informe qual o valor deseja sacar e sua chave PIX cadastrada:</p>
-            <div class="container-input">
-              <input required placeholder="Qual valor deseja sacar?" type="text">
-              <input required placeholder="Digite sua chave Pix" type="text">
-            </div>
-            <span class="elementor-field-option"><input type="radio" value="Primeira vez no APP NOVO" id="form-field-field_eac25a0-0" name="form_fields[field_eac25a0]" required="required" aria-required="true"> <label for="form-field-field_eac25a0-0">Primeira vez no <b>APP NOVO</b></label></span>
-          </div>
-          <div class="div-button">
-            <button class="submit-button button-with-pix button-two">
-              <img src="images/jEcRdEfFdhJk.svg" alt="">
-              <h2>SACAR AGORA!</h2></button>
-          </div>
-          </div>
-        </div>  -->
+
+
+<script>
+  function animarNumero(final, duracao, elementoId) {
+    let start = performance.now();
+    let atual = 0;
+    let elemento = document.getElementById(elementoId);
+
+    function updateNumero(timestamp) {
+      let tempoPassado = timestamp - start;
+      atual = (tempoPassado / duracao) * final;
+
+      if (atual < final) {
+        elemento.innerText = `R$ ${atual.toFixed(2)}`;
+        requestAnimationFrame(updateNumero);
+      } else {
+        elemento.innerText = `R$ ${final.toFixed(2)}`;
+      }
+    }
+
+    requestAnimationFrame(updateNumero);
+  }
+
+  animarNumero(230, 1400, 'carteira'); // 230 é o valor final, 1000 é a duração em milissegundos (1 segundo), 'carteira' é o ID do elemento
+</script>
+
+
+<script>
+  function animarContador(final, duracao) {
+    let start = performance.now();
+    let atual = 0;
+
+    function updateContador(timestamp) {
+      let tempoPassado = timestamp - start;
+      atual = (tempoPassado / duracao) * final;
+
+      if (atual < final) {
+        document.getElementById('saldo').innerText = `R$ ${atual.toFixed(2)}`;
+        requestAnimationFrame(updateContador);
+      } else {
+        document.getElementById('saldo').innerText = `R$ ${final.toFixed(2)}`;
+      }
+    }
+
+    requestAnimationFrame(updateContador);
+  }
+
+  animarContador(230, 1400); // 230 é o valor final, e 1000 é a duração em milissegundos (1 segundo)
+</script>
+
+
+
       
     
     <script>
